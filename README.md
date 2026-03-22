@@ -20,7 +20,9 @@ A React dashboard for real-time monitoring and analytics.
 
 #### 2. [FluxQ Engine (Server)](file:///server/README.md)
 The core logic engine and REST API. Distributed as a standalone package.
+
 ◈ **NPM Engine**: [fluxq-engine](https://www.npmjs.com/package/fluxq-engine)
+
 ◈ **Live API**: [fluxq.onrender.com](https://fluxq.onrender.com)
 
 ---
