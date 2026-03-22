@@ -348,10 +348,38 @@ Contributions welcome! Areas for improvement:
 
 MIT
 
-## 🙋 Support
-
-For issues, questions, or feature requests: [GitHub Issues](https://github.com/yourusername/queue-optimizer/issues)
-
 ---
 
-**Built for HackVerse 2.0 - Telemedicine Queue Optimization Challenge** 🏆
+**Developed by Diksha** 🏆
+
+## 🌐 Live API Usage
+
+You can now use this API in any of your projects! 
+
+**Base URL**: `https://fluxq.onrender.com`
+
+### Example: Get Current Configuration
+```bash
+curl https://fluxq.onrender.com/api/v1/config
+```
+
+### Example: Check Server Health
+```bash
+curl https://fluxq.onrender.com/health
+```
+
+### Example: Optimize a Queue (JS/TS)
+```typescript
+const response = await fetch('https://fluxq.onrender.com/api/v1/simulate', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    patients: [
+      { id: 'P001', urgency: 'HIGH', arrivalTime: new Date().toISOString() },
+      { id: 'P002', urgency: 'LOW', arrivalTime: new Date().toISOString() }
+    ]
+  })
+});
+const data = await response.json();
+console.log(data.optimizedQueue);
+```

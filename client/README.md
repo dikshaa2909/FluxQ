@@ -728,6 +728,6 @@ The system enforces 4 fairness rules to prevent patient starvation:
 
 ---
 
-## 📝 License
+---
 
-Private project — not for redistribution.
+**Developed by Diksha** 🏆
