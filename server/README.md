@@ -1,28 +1,48 @@
-# FluxQ Engine ― Telemedicine Queue Optimizer
+# FluxQ Engine ● Telemedicine Queue Optimizer
 
-◆ **Overview**  
-FluxQ Engine is a high-performance REST API and core logic engine built for clinical-aware patient triage and intelligent queue management. It optimizes wait times by up to 40% using advanced clinical weight balancing and fairness enforcement.
-
-◈ **NPM Package**: [fluxq-engine](https://www.npmjs.com/package/fluxq-engine)  
-◈ **Live API Status**: [fluxq.onrender.com](https://fluxq.onrender.com/health) 
+[![Node.js](https://img.shields.io/badge/Node.js-20.x-green?logo=node.js)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript)](https://www.typescriptlang.org)
+[![Express](https://img.shields.io/badge/Express-4.x-black?logo=express)](https://expressjs.com)
+[![NPM Version](https://img.shields.io/npm/v/fluxq-engine.svg?color=teal)](https://www.npmjs.com/package/fluxq-engine)
 
 ---
 
-◆ **Features**
+### ● Overview
+FluxQ Engine is a high-performance REST API and core logic engine built for clinical-aware patient triage and intelligent queue management. It optimizes wait times by up to 40% using advanced clinical weight balancing and fairness enforcement.
 
-• **Smart Triage Logic**: Dynamic symptom assessment and severity classification.
-• **Queue Optimization**: Real-time reordering based on clinical severity and fairness thresholds.
-• **Fairness Monitoring**: Dynamic aging boosts and starvation risk tracking.
-• **Comprehensive Metrics**: Provides full baseline vs. optimized comparisons with 9+ performance KPIs.
+◈ **NPM Package**: [fluxq-engine](https://www.npmjs.com/package/fluxq-engine)  
+◈ **Live API Status**: [Online (Render)](https://fluxq.onrender.com/health) 
 
-◆ **Quick Start**
+---
+
+### ● Key Features
+
+#### ┃ 0x01 ― Smart Triage Logic
+› Dynamic symptom assessment and severity classification.
+› Clinical priority scoring (Severity × Wait Time × Fairness).
+
+#### ┃ 0x02 ― Queue Optimization
+› Real-time reordering based on clinical severity and fairness thresholds.
+› Starvation prevention and dynamic aging boosts.
+
+#### ┃ 0x03 ― Fairness Monitoring
+› Real-time identification of starvation risks.
+› Fairness reports with aging boost tracking.
+
+#### ┃ 0x04 ― Simulation & Metrics
+› High-level KPIs: Wait time reduction, doctor utilization, and throughput.
+› Full baseline vs. optimized comparison reporting.
+
+---
+
+### ● Quick Start
 
 ▶ **Installation**
 ```bash
 npm install fluxq-engine
 ```
 
-▶ **Usage**  
+▶ **API Client Library Usage**
 ```typescript
 import { QueueOptimizer } from 'fluxq-engine';
 
@@ -30,15 +50,15 @@ const optimizer = new QueueOptimizer();
 const optimizedQueue = optimizer.optimize(patients, config);
 ```
 
-◆ **API Connectivity**
+▶ **Direct API Connectivity**
 ◈ `GET /api/v1/config` ― Get current system optimization parameters.
 ◈ `POST /api/v1/optimize` ― Submit a patient list for instant re-ordering.
 ◈ `POST /api/v1/simulate` ― Run a complete FCFS vs. AI comparison.
 
 ---
-◆ **Development**
-◈ **Developed by [Diksha](https://github.com/dikshaa2909)**  
-◈ Built using Node.js, TypeScript, and Express.
+
+### ● Developer
+◈ **Built by [Diksha](https://github.com/dikshaa2909)**
 
 ---
 ◈ **FluxQ Engine ― 2026**
