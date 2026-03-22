@@ -38,9 +38,5 @@ The core logic engine and REST API. Distributed as a standalone package.
 › Real-time wait time estimation and doctor utilization simulation.
 
 ---
+**Built by [Diksha](https://github.com/dikshaa2909)**
 
-### ● Developer
-◈ **Built by [Diksha](https://github.com/dikshaa2909)**
-
----
----
