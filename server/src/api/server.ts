@@ -58,6 +58,17 @@ app.get('/health', (req: Request, res: Response) => {
 // API ROUTES
 // ============================================================
 
+// Root entry point
+app.get('/', (req: Request, res: Response) => {
+  res.json({
+    success: true,
+    message: 'Welcome to FluxQ API',
+    version: '1.0.3',
+    docs: '/api/v1/docs',
+    health: '/health'
+  });
+});
+
 app.use('/api/v1', routes);
 
 // ============================================================
