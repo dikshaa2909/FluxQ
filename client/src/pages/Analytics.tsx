@@ -111,10 +111,17 @@ export function AnalyticsPage() {
     : []
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="space-y-10 relative">
+      {/* Background watermark */}
+      <div className="page-watermark">ANL</div>
+
+      <div className="flex items-center justify-between animate-fade-in-up">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight">Analytics</h1>
+          <p className="section-label flex items-center gap-2 mb-3">
+            <span className="live-dot" />
+            Analytics Engine
+          </p>
+          <h1 className="section-heading text-2xl font-bold tracking-tight">Analytics</h1>
           <p className="text-muted-foreground text-sm mt-1">
             Performance comparison, fairness tracking, and metrics visualization
           </p>

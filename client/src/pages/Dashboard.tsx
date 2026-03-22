@@ -18,9 +18,27 @@ export function DashboardPage() {
   const navigate = useNavigate()
   const [health, setHealth] = useState<HealthResponse | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [sessionUptime, setSessionUptime] = useState(0)
 
   useEffect(() => {
+    // Persist session start time across refreshes
+    let sessionStart = sessionStorage.getItem('fluxq_session_start')
+    if (!sessionStart) {
+      sessionStart = Date.now().toString()
+      sessionStorage.setItem('fluxq_session_start', sessionStart)
+    }
+
+    const startTime = parseInt(sessionStart, 10)
+
+    const updateUptime = () => {
+      setSessionUptime(Math.floor((Date.now() - startTime) / 1000))
+    }
+
+    updateUptime()
+    const timer = setInterval(updateUptime, 1000)
+
     api.health().then(setHealth).catch((e) => setError(e.message))
+    return () => clearInterval(timer)
   }, [])
 
   const features = [
@@ -104,7 +122,7 @@ export function DashboardPage() {
             <div className="space-y-2">
               <p className="font-mono-space text-[10px] tracking-[.14em] uppercase text-muted-foreground">Uptime</p>
               <p className="counter-value text-2xl">
-                {health ? `${Math.floor(health.uptime / 60)}m ${Math.floor(health.uptime % 60)}s` : '—'}
+                {`${Math.floor(sessionUptime / 60)}m ${Math.floor(sessionUptime % 60)}s`}
               </p>
             </div>
             <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -128,7 +146,7 @@ export function DashboardPage() {
 
       {/* Quick actions */}
       <div className="animate-fade-in-up delay-2">
-        <p className="section-label mb-5">[ 01 ] — Quick Actions</p>
+        <p className="section-label mb-5">Quick Actions</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] rounded-xl overflow-hidden border border-border/50 bg-border/20">
           {features.map((feature, i) => (
             <div
@@ -152,7 +170,7 @@ export function DashboardPage() {
 
       {/* API Endpoints */}
       <div className="animate-fade-in-up delay-4">
-        <p className="section-label mb-5">[ 02 ] — API Endpoints</p>
+        <p className="section-label mb-5">API Endpoints</p>
         <div className="glass-card overflow-hidden">
           <div className="p-5 border-b border-border/50">
             <h3 className="font-display text-xs font-bold tracking-wider uppercase">REST API</h3>
@@ -184,7 +202,7 @@ export function DashboardPage() {
 
       {/* Specialized Queues */}
       <div className="animate-fade-in-up delay-5">
-        <p className="section-label mb-5">[ 03 ] — Specialized Queues</p>
+        <p className="section-label mb-5">Specialized Queues</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] rounded-xl overflow-hidden border border-border/50 bg-border/20">
           {[
             { type: 'Diabetes', desc: 'Blood glucose, insulin, hypo/hyper symptoms', icon: Droplets, color: '#3b82f6' },

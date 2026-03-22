@@ -1,6 +1,6 @@
 {
   "name": "fluxq-engine",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Powerful, clinical-aware patient triage and queue optimization engine for healthcare platforms.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

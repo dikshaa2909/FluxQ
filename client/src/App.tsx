@@ -43,6 +43,8 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { hasError: boole
   }
 }
 
+import { LandingPage } from '@/pages/LandingPage'
+
 function App() {
   return (
     <ErrorBoundary>
@@ -50,8 +52,12 @@ function App() {
         <PatientProvider>
           <BrowserRouter>
             <Routes>
+              {/* Landing Page - No Layout */}
+              <Route path="/" element={<LandingPage />} />
+
+              {/* App Shell - With Layout */}
               <Route element={<Layout />}>
-                <Route path="/" element={<DashboardPage />} />
+                <Route path="/dashboard" element={<DashboardPage />} />
                 <Route path="/intake" element={<IntakePage />} />
                 <Route path="/simulator" element={<SimulatorPage />} />
                 <Route path="/doctors" element={<DoctorsPage />} />

@@ -129,7 +129,7 @@ function IntakePageInner() {
       <div className="animate-fade-in-up">
         <p className="section-label flex items-center gap-2 mb-3">
           <span className="live-dot" />
-          <span className="font-mono-space text-[10px] tracking-[.14em] uppercase text-muted-foreground">[ 01 ] Patient Intake</span>
+          <span className="font-mono-space text-[10px] tracking-[.14em] uppercase text-muted-foreground">Patient list</span>
         </p>
         <h1 className="section-heading text-3xl md:text-4xl">
           <span className="text-accent">Patient</span>{' '}

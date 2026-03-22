@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Link, Outlet } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { api } from '@/api/client'
 import { useTheme } from '@/lib/ThemeContext'
@@ -11,10 +11,12 @@ import {
   ClipboardList,
   Sun,
   Moon,
+  ArrowLeft,
 } from 'lucide-react'
+import { Logo } from './Logo'
 
 const navItems = [
-  { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
+  { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
   { to: '/intake', icon: ClipboardList, label: 'Patient Intake' },
   { to: '/simulator', icon: PlayCircle, label: 'Simulator' },
   { to: '/doctors', icon: Stethoscope, label: 'Doctors' },
@@ -44,27 +46,20 @@ export function Layout() {
       {/* Sidebar */}
       <aside className="w-64 sidebar-glass flex flex-col shrink-0 relative z-20">
         {/* Logo */}
-        <div className="p-6 border-b border-border/60">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M2 7 L5 4 L8 7 L11 3" stroke="#000" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 11 L5 8 L8 10 L11 5" stroke="#000" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" opacity=".5"/>
-              </svg>
-            </div>
-            <div className="flex flex-col gap-0 leading-none">
-              <span className="font-display text-xs font-black tracking-wider uppercase">
-                Flux<span className="text-primary">Q</span>
-              </span>
-              <span className="font-mono-space text-[8px] tracking-[.14em] text-muted-foreground/50 uppercase mt-0.5">
-                Queue Intelligence
-              </span>
-            </div>
-          </div>
-        </div>
+        <Link to="/" className="p-6 border-b border-border/60 hover:bg-accent/50 transition-colors block">
+          <Logo size={32} />
+        </Link>
 
         {/* Navigation */}
         <nav className="flex-1 p-4 space-y-1">
+          <Link 
+            to="/" 
+            className="flex items-center gap-3 px-3 py-2 mb-6 rounded-lg text-xs tracking-wide text-primary border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-all group"
+          >
+            <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" />
+            <span className="font-mono-space text-[10px] tracking-wider uppercase font-bold">Back to Website</span>
+          </Link>
+          
           <p className="section-label px-3 mb-3">Navigation</p>
           {navItems.map(({ to, icon: Icon, label }) => (
             <NavLink

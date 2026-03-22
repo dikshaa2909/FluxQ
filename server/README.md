@@ -51,9 +51,14 @@ const optimizedQueue = optimizer.optimize(patients, config);
 ```
 
 ▶ **Direct API Connectivity**
+`GET /api/v1/config` ― Get current system optimization parameters.
 
- `GET /api/v1/config` ― Get current system optimization parameters.
- 
- `POST /api/v1/optimize` ― Submit a patient list for instant re-ordering.
- 
- `POST /api/v1/simulate` ― Run a complete FCFS vs. AI comparison.
+`POST /api/v1/optimize` ― Submit a patient list for instant re-ordering.
+
+`POST /api/v1/simulate` ― Run a complete FCFS vs. AI comparison.
+
+---
+
+### ● Developer
+
+**Built by [Diksha](https://github.com/dikshaa2909)**
