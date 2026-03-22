@@ -1,7 +1,7 @@
 {
-  "name": "@telemedicine/queue-optimizer",
+  "name": "fluxq-engine",
   "version": "1.0.0",
-  "description": "Intelligent queue optimization system for telemedicine platforms. Reduces wait times, improves fairness, and optimizes doctor utilization using ML-based priority scoring.",
+  "description": "Powerful, clinical-aware patient triage and queue optimization engine for healthcare platforms.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -36,12 +36,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/queue-optimizer"
+    "url": "https://github.com/dikshaa2909/FluxQ.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/queue-optimizer/issues"
+    "url": "https://github.com/dikshaa2909/FluxQ/issues"
   },
-  "homepage": "https://github.com/yourusername/queue-optimizer#readme",
+  "homepage": "https://github.com/dikshaa2909/FluxQ#readme",
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
