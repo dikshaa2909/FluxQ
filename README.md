@@ -1,4 +1,4 @@
-# FluxQ ● Intelligent Queue Optimization Ecosystem
+# FluxQ - Intelligent Queue Optimization 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg)](https://opensource.org/licenses/MIT)
 [![NPM Version](https://img.shields.io/npm/v/fluxq-engine.svg?color=teal)](https://www.npmjs.com/package/fluxq-engine)
@@ -14,11 +14,11 @@
 
 ### ● Project Architecture
 
-#### FluxQ Dashboard (Client)](file:///client/README.md)
+#### 1. [FluxQ Dashboard (Client)](file:///client/README.md)
 A React dashboard for real-time monitoring and analytics.
 ◈ **Live App**: [flux-q.vercel.app](https://flux-q.vercel.app)
 
-#### [FluxQ Engine (Server)](file:///server/README.md)
+#### 2. [FluxQ Engine (Server)](file:///server/README.md)
 The core logic engine and REST API. Distributed as a standalone package.
 ◈ **NPM Engine**: [fluxq-engine](https://www.npmjs.com/package/fluxq-engine)
 ◈ **Live API**: [fluxq.onrender.com](https://fluxq.onrender.com)
@@ -26,11 +26,13 @@ The core logic engine and REST API. Distributed as a standalone package.
 ---
 
 ### ● Core Competencies
-◆ **Clinical Priority** 
+ **Clinical Priority** 
 › Uses disease-specific clinical multipliers (Diabetes, BP, Cholesterol) to ensure critical patients are seen first.
-◆ **Operational Fairness** 
+
+ **Operational Fairness** 
 › Implements dynamic aging boosts to prevent low-priority "starvation" and maintain patient satisfaction.
-◆ **Predictive Analytics** 
+
+ **Predictive Analytics** 
 › Real-time wait time estimation and doctor utilization simulation.
 
 ---
