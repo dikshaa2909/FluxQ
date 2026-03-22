@@ -1,37 +1,32 @@
-# 🏥 FluxQ — Smart Patient Queue Dashboard
+# FluxQ Dashboard ― Real-time Queue Intelligence
 
-**FluxQ** is a high-performance, real-time patient triage and queue management system. It integrates with an AI-powered backend to classify patients by clinical severity, optimize wait times, and simulate live doctor assignments.
+◆ **Overview**  
+FluxQ Dashboard is a high-performance clinical monitoring system built with React 19. It provides real-time visualization of AI-optimized patient triage, simulation of doctor assignments, and in-depth performance analytics.
 
----
-
-### 🌐 Live Application
-**Dashboard**: [flux-q.vercel.app](https://flux-q.vercel.app)  
-**API Status**: [Online (Render)](https://fluxq.onrender.com/health)
+◈ **Live URL**: [flux-q.vercel.app](https://flux-q.vercel.app)  
+◈ **Core Engine**: [fluxq-engine (NPM)](https://www.npmjs.com/package/fluxq-engine)
 
 ---
 
-### ✨ Key Features
-- **Smart Triage**: Clinical intake workflow for specialized queues (Diabetes, BP, etc.).
-- **Real-time Optimization**: ML-driven priority scoring (Severity × Wait Time × Fairness).
-- **Live Simulator**: Real-time doctor assignment with burnout tracking.
-- **Deep Analytics**: Comparison of optimized vs. FCFS metrics with visual charts.
-- **Fairness Engine**: Starvation prevention and dynamic aging boosts.
+◆ **Key Features**
 
-### 🛠 Tech Stack
-- **Framework**: React 19 + TypeScript 5
-- **Build Tool**: Vite 6
-- **Styling**: Vanilla CSS + Tailwind CSS 4
-- **Charts**: Recharts 3
-- **Icons**: Lucide React
+• **Smart Triage Dashboard**: Clinical intake for specialized queues (Diabetes, BP, etc.).
+• **Live Simulation**: Real-time doctor assignment with burnout tracking.
+• **Visual Analytics**: Interactive charts for comparing optimized vs. FCFS metrics.
+• **Premium UX**: High-end glassmorphism components with live dot status.
 
-### 🚀 Local Setup
-```bash
-git clone <repo-url>
-cd client
-npm install
-npm run dev
-```
+◆ **Tech Stack**
+
+• **Framework**: React 19 + TypeScript 5
+• **Build Tool**: Vite 6
+• **Styling**: Vanilla CSS + Tailwind CSS 4
+• **Charts**: Recharts 3
+• **Icons**: Lucide React
 
 ---
+◆ **Development**
+◈ **Developed by [Diksha](https://github.com/dikshaa2909)**  
+◈ Built using React, TypeScript, and modern CSS.
 
-**Developed by Diksha** 🏆
+---
+◈ **FluxQ Project ― 2026**

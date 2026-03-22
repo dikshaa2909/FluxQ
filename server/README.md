@@ -1,35 +1,44 @@
-# 🏥 FluxQ Engine — Telemedicine Queue Optimizer
+# FluxQ Engine ― Telemedicine Queue Optimizer
 
-**FluxQ Engine** is a high-performance REST API for intelligent patient triage and queue optimization. It reduces wait times by up to 40%, improves fairness, and optimizes doctor utilization using ML-based priority scoring.
+◆ **Overview**  
+FluxQ Engine is a high-performance REST API and core logic engine built for clinical-aware patient triage and intelligent queue management. It optimizes wait times by up to 40% using advanced clinical weight balancing and fairness enforcement.
 
----
-
-### 🌐 Live API Usage
-**Base URL**: `https://fluxq.onrender.com`  
-**Health Check**: [Online](https://fluxq.onrender.com/health)
+◈ **NPM Package**: [fluxq-engine](https://www.npmjs.com/package/fluxq-engine)  
+◈ **Live API Status**: [fluxq.onrender.com](https://fluxq.onrender.com/health) 
 
 ---
 
-### ✨ Features
-- **Smart Triage Engine**: Dynamic symptom assessment and severity classification.
-- **Queue Optimization**: Real-time reordering based on clinical severity and fairness thresholds.
-- **Fairness Monitoring**: Aging boosts and starvation risk alerts.
-- **Simulate & Metrics**: Full baseline vs. optimized comparison with 9+ performance KPIs.
+◆ **Features**
 
-### 🔌 API Integration
-You can use this API in any project:
-- **Get Config**: `GET /api/v1/config`
-- **Optimize Queue**: `POST /api/v1/optimize`
-- **Run Simulation**: `POST /api/v1/simulate`
+• **Smart Triage Logic**: Dynamic symptom assessment and severity classification.
+• **Queue Optimization**: Real-time reordering based on clinical severity and fairness thresholds.
+• **Fairness Monitoring**: Dynamic aging boosts and starvation risk tracking.
+• **Comprehensive Metrics**: Provides full baseline vs. optimized comparisons with 9+ performance KPIs.
 
-### 🚀 Local Setup
+◆ **Quick Start**
+
+▶ **Installation**
 ```bash
-git clone <repo-url>
-cd server
-npm install
-npm start
+npm install fluxq-engine
 ```
 
----
+▶ **Usage**  
+```typescript
+import { QueueOptimizer } from 'fluxq-engine';
 
-**Developed by Diksha** 🏆
+const optimizer = new QueueOptimizer();
+const optimizedQueue = optimizer.optimize(patients, config);
+```
+
+◆ **API Connectivity**
+◈ `GET /api/v1/config` ― Get current system optimization parameters.
+◈ `POST /api/v1/optimize` ― Submit a patient list for instant re-ordering.
+◈ `POST /api/v1/simulate` ― Run a complete FCFS vs. AI comparison.
+
+---
+◆ **Development**
+◈ **Developed by [Diksha](https://github.com/dikshaa2909)**  
+◈ Built using Node.js, TypeScript, and Express.
+
+---
+◈ **FluxQ Engine ― 2026**
