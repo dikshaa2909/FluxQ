@@ -14,11 +14,11 @@
 
 ### ● Project Architecture
 
-#### ┃[FluxQ Dashboard (Client)](file:///client/README.md)
+#### FluxQ Dashboard (Client)](file:///client/README.md)
 A React dashboard for real-time monitoring and analytics.
 ◈ **Live App**: [flux-q.vercel.app](https://flux-q.vercel.app)
 
-#### ┃[FluxQ Engine (Server)](file:///server/README.md)
+#### [FluxQ Engine (Server)](file:///server/README.md)
 The core logic engine and REST API. Distributed as a standalone package.
 ◈ **NPM Engine**: [fluxq-engine](https://www.npmjs.com/package/fluxq-engine)
 ◈ **Live API**: [fluxq.onrender.com](https://fluxq.onrender.com)
