@@ -35,7 +35,10 @@ https://flux-q.vercel.app/
 
 ### ● Tech Stack
 • **Framework**: React 19 + TypeScript 5
+
 • **Styling**: Vanilla CSS + Tailwind CSS 4
+
 • **Charts**: Recharts 3
+
 • **Icons**: Lucide React
 
