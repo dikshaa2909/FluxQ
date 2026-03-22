@@ -1,4 +1,5 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000/api/v1';
+const API_ROOT = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+const API_BASE = `${API_ROOT}/api/v1`;
 
 // --- Intake / Classification types ---
 
@@ -331,7 +332,7 @@ function sanitizeMetrics(m: MetricsResponse): MetricsResponse {
 
 export const api = {
   health: async (): Promise<HealthResponse> => {
-    const res = await fetch('http://localhost:3000/health');
+    const res = await fetch(`${API_ROOT}/health`);
     return res.json();
   },
 
