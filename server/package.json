@@ -1,0 +1,51 @@
+{
+  "name": "@telemedicine/queue-optimizer",
+  "version": "1.0.0",
+  "description": "Intelligent queue optimization system for telemedicine platforms. Reduces wait times, improves fairness, and optimizes doctor utilization using ML-based priority scoring.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/api/server.ts",
+    "demo": "ts-node src/demo.ts",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "telemedicine",
+    "queue-optimization",
+    "healthcare",
+    "scheduling",
+    "priority-queue",
+    "ml",
+    "fairness"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/queue-optimizer"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/queue-optimizer/issues"
+  },
+  "homepage": "https://github.com/yourusername/queue-optimizer#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0"
+  }
+}
